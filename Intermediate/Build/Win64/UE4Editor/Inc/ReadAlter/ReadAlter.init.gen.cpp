@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeReadAlter_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x075583EE,
+				0x1C785855,
 				0x6CA761A5,
 				METADATA_PARAMS(nullptr, 0)
 			};
