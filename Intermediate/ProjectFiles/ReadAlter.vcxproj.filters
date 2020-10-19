@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ReadAlter.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{CDC048BF-4D3D-4ED4-8FFB-5D1C46094E09}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ReadAlter.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ReadAlterEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\MCO_Mocap_Basics.png" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{5C244C29-85A5-458A-B0E7-8EB2A581422C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ReadAlter">
+      <UniqueIdentifier>{AD0890C3-C46C-42CC-AAFF-0F040089ABDB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ReadAlter\mainCharacter.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\mainCharacter.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\NewActor.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\NewActor.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\ReadAlter\ReadAlter.Build.cs">
+      <Filter>Source\ReadAlter</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ReadAlter\ReadAlter.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\ReadAlter.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\ReadAlterCharacter.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\ReadAlterCharacter.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\ReadAlterGameMode.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\ReadAlterGameMode.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\ReadAlterHUD.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\ReadAlterHUD.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\ReadAlterProjectile.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\ReadAlterProjectile.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\ReadAlter\AddMeshfromFile.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\ReadAlter\AddMeshfromFile.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

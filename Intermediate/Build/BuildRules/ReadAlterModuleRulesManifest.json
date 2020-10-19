@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\UE4 Project\\ReadAlter\\Source\\ReadAlter\\ReadAlter.Build.cs",
+		"C:\\UE4 Project\\ReadAlter\\Source\\ReadAlter.Target.cs",
+		"C:\\UE4 Project\\ReadAlter\\Source\\ReadAlterEditor.Target.cs"
+	],
+	"EngineVersion": "4.24.3"
+}

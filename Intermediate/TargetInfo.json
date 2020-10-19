@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ReadAlter",
+			"Path": "C:\\UE4 Project\\ReadAlter\\Source\\ReadAlter.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ReadAlterEditor",
+			"Path": "C:\\UE4 Project\\ReadAlter\\Source\\ReadAlterEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
