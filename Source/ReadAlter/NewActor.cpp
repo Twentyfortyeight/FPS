@@ -8,7 +8,7 @@ ANewActor::ANewActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	supermesh = CreateDefaultSubobject <UStaticMeshComponent>(TEXT("Super Mesh")); ////присваение обькту тип статического  обькта
+	supermesh = CreateDefaultSubobject <UStaticMeshComponent>(TEXT("Super Mesh")); //присваение обьекту тип статического  обьекта
 }
 
 // Called when the game starts or when spawned

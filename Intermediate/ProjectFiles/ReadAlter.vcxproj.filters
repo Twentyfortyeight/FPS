@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ReadAlter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CDC048BF-4D3D-4ED4-8FFB-5D1C46094E09}</UniqueIdentifier>
+      <UniqueIdentifier>{3DD6CD6C-B9FE-4E00-8724-87239E5C7917}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ReadAlter.Target.cs">
       <Filter>Source</Filter>
@@ -11,9 +11,11 @@
     <None Include="..\..\Source\ReadAlterEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\MCO_Mocap_Basics.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{5C244C29-85A5-458A-B0E7-8EB2A581422C}</UniqueIdentifier>
+      <UniqueIdentifier>{1982887E-0D83-4238-845E-531E178D3C84}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,8 +33,26 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ReadAlter">
-      <UniqueIdentifier>{AD0890C3-C46C-42CC-AAFF-0F040089ABDB}</UniqueIdentifier>
+      <UniqueIdentifier>{8835F207-A012-4ACA-BD95-4087F0D98DFB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ReadAlter\AddBillComponent.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\AddBillComponent.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\AddMeshfromFile.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\AddMeshfromFile.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ReadAlter\DebugLogging.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ReadAlter\DebugLogging.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ReadAlter\mainCharacter.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
@@ -80,12 +100,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\ReadAlter\AddMeshfromFile.h">
+    <ClInclude Include="..\..\Source\ReadAlter\MyActorLoc.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\ReadAlter\AddMeshfromFile.cpp">
+    <ClCompile Include="..\..\Source\ReadAlter\MyActorLoc.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "NewActor.generated.h"
+#define LNG setlocale(LC_ALL, "Rus");
+
 
 UCLASS()
 class READALTER_API ANewActor : public AActor
@@ -24,5 +26,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* supermesh;//присваение обькту тип статического  обькта
+		UStaticMeshComponent* supermesh;//присваение обьекту тип статического  обьекта
 };

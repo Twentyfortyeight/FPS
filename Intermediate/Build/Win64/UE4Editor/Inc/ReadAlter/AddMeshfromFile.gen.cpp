@@ -17,7 +17,6 @@ void EmptyLinkFunctionForGeneratedCodeAddMeshfromFile() {}
 	READALTER_API UClass* Z_Construct_UClass_AAddMeshfromFile();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_ReadAlter();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AAddMeshfromFile::StaticRegisterNativesAAddMeshfromFile()
 	{
@@ -32,11 +31,6 @@ void EmptyLinkFunctionForGeneratedCodeAddMeshfromFile() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_meshfromfilex_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_meshfromfilex;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -50,17 +44,6 @@ void EmptyLinkFunctionForGeneratedCodeAddMeshfromFile() {}
 		{ "ModuleRelativePath", "AddMeshfromFile.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAddMeshfromFile_Statics::NewProp_meshfromfilex_MetaData[] = {
-		{ "Category", "AddMeshfromFile" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "AddMeshfromFile.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAddMeshfromFile_Statics::NewProp_meshfromfilex = { "meshfromfilex", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAddMeshfromFile, meshfromfilex), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAddMeshfromFile_Statics::NewProp_meshfromfilex_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAddMeshfromFile_Statics::NewProp_meshfromfilex_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAddMeshfromFile_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAddMeshfromFile_Statics::NewProp_meshfromfilex,
-	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAddMeshfromFile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAddMeshfromFile>::IsAbstract,
 	};
@@ -70,11 +53,11 @@ void EmptyLinkFunctionForGeneratedCodeAddMeshfromFile() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		Z_Construct_UClass_AAddMeshfromFile_Statics::PropPointers,
+		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		UE_ARRAY_COUNT(Z_Construct_UClass_AAddMeshfromFile_Statics::PropPointers),
+		0,
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AAddMeshfromFile_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AAddMeshfromFile_Statics::Class_MetaDataParams))
@@ -88,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeAddMeshfromFile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAddMeshfromFile, 3060017305);
+	IMPLEMENT_CLASS(AAddMeshfromFile, 3436969155);
 	template<> READALTER_API UClass* StaticClass<AAddMeshfromFile>()
 	{
 		return AAddMeshfromFile::StaticClass();

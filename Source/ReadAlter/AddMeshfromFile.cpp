@@ -13,7 +13,8 @@ AAddMeshfromFile::AAddMeshfromFile()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	
-	UStaticMeshComponent* Cylinder = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cylender"));
+	/*                                              //Добавить меш в виде файла//
+	UStaticMeshComponent* Cylinder = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cylender")); 
 	Cylinder->SetupAttachment(RootComponent);
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>CylinderAsset(TEXT("/Game/StarterContent/Shapes/Shape_Cylinder.Shape_Cylinder"));
 	if (CylinderAsset.Succeeded())
@@ -22,6 +23,7 @@ AAddMeshfromFile::AAddMeshfromFile()
 		Cylinder->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
 		Cylinder->SetWorldScale3D(FVector(.0f));
 	}
+	*/
 }
 
 // Called when the game starts or when spawned
