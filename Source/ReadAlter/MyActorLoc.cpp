@@ -27,11 +27,12 @@ void AMyActorLoc::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-	FVector MyChar = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+	/*FVector MyChar = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
 	
 	if (GEngine)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Player Location: %s"), *MyChar.ToString()));
 	}
+	*/
 }
 

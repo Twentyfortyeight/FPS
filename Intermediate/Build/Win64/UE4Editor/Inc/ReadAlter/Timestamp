@@ -1,10 +1,13 @@
 C:\UE4 Project\ReadAlter\Source\ReadAlter\AddBillComponent.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\DebugLogging.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\mainCharacter.h
 C:\UE4 Project\ReadAlter\Source\ReadAlter\AddMeshfromFile.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\DdebugHelpers.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\DebugLogging.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\HideActor.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\mainCharacter.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\MyActorLoc.h
 C:\UE4 Project\ReadAlter\Source\ReadAlter\NewActor.h
 C:\UE4 Project\ReadAlter\Source\ReadAlter\ReadAlterCharacter.h
 C:\UE4 Project\ReadAlter\Source\ReadAlter\ReadAlterGameMode.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\ReadAlterHUD.h
 C:\UE4 Project\ReadAlter\Source\ReadAlter\ReadAlterProjectile.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\MyActorLoc.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\ReadAlterHUD.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\GetNumberofPawns.h
