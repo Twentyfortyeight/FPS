@@ -19,7 +19,7 @@ void ADebugLogging::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	UE_LOG(LogTemp, Warning, TEXT("I Just Started Running")); // выводит текст в начале игры в аутлоге
+	/*UE_LOG(LogTemp, Warning, TEXT("I Just Started Running")); // выводит текст в начале игры в аутлоге
 	if (GEngine)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("SCREEN ME"));// ¬ыводи текст на экран в начале игры 
@@ -31,11 +31,11 @@ void ADebugLogging::BeginPlay()
 	FVector MV(100 , 500 , 700);
 	if (GEngine)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("My vector equal: %s"), *MV.ToString())); /*Debug, printf 
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("My vector equal: %s"), *MV.ToString())); Debug, printf 
 		обвернут текст  и %s показывает трехмерные кординаты обьекта через указатель на него *MV
-		*/
+		
 	}
-	
+	*/
 }  
 
 // Called every frame

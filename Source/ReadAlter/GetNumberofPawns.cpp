@@ -2,6 +2,9 @@
 
 
 #include "GetNumberofPawns.h"
+#include "Engine/World.h"
+#include "Engine/GameEngine.h"
+#include <Runtime\Engine\Classes\Engine\Engine.h>
 
 // Sets default values
 AGetNumberofPawns::AGetNumberofPawns()
@@ -15,7 +18,11 @@ AGetNumberofPawns::AGetNumberofPawns()
 void AGetNumberofPawns::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	int32 NumPawns = GetWorld()->GetNumPawns(); //для того чтоб получить метод getworld надо подключить дерективу Engine/World.h
+	if (GEngine) //для подключения GEngine надо прописать дерективу 
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Emerald, FString::Printf(TEXT("Numbers of Pawns OBject: %d"),NumPawns));
+	}
 }
 
 // Called every frame
