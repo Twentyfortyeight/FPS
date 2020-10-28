@@ -1,5 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
+//Выводит текущие кординаты на экран
 
 #include "MyActorLoc.h"
 #include "EngineGlobals.h"

@@ -18,8 +18,9 @@ AGetNumberofPawns::AGetNumberofPawns()
 void AGetNumberofPawns::BeginPlay()
 {
 	Super::BeginPlay();
+	//¬ыводит количество Pawn на текущем уровне 
 	int32 NumPawns = GetWorld()->GetNumPawns(); //дл€ того чтоб получить метод getworld надо подключить дерективу Engine/World.h
-	if (GEngine) //дл€ подключени€ GEngine надо прописать дерективу 
+	if (GEngine) //дл€ подключени€ GEngine надо прописать дерективу Engine/GameEngine.h
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Emerald, FString::Printf(TEXT("Numbers of Pawns OBject: %d"),NumPawns));
 	}

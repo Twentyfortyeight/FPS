@@ -1,0 +1,3 @@
+C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Definitions.ReadAlter.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\RotateanActor.h
+C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\RotateanActor.generated.h

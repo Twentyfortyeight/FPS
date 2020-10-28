@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+//Тик, хайд и колизия 
 
 
 #include "HideActor.h"
@@ -15,6 +15,7 @@ AHideActor::AHideActor()
 void AHideActor::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	if (HideInGame) // по дефолту HideInGame true 
 	{
 		DisableActor(HideInGame);
