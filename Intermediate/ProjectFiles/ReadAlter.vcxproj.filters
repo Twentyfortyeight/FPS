@@ -149,6 +149,15 @@
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\RotateAngleAxisSpecifyVector.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\RotateAngleAxis.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\GetNumberofPawns.cpp">
@@ -179,6 +188,15 @@
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\RotateAngleAxisSpecifyVector.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\RotateAngleAxis.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

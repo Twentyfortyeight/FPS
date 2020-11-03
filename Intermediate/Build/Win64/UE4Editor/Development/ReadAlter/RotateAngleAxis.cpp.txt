@@ -1,0 +1,4 @@
+C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Definitions.ReadAlter.h
+C:\UE4 Project\ReadAlter\Source\ReadAlter\RotateAngleAxis.h
+C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\RotateAngleAxis.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h

@@ -22,35 +22,25 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	UPROPERTY(VisibleAnywhere)
+	
+	UPROPERTY(VisibleAnywhere, Category = "Light Switch")
 		class UPointLightComponent* PointLight;
+	
 	UPROPERTY(VisibleAnywhere)
 		class USphereComponent* LightSphere;
+	
 	UPROPERTY(VisibleAnywhere)
-		float LightIntensyti;
-	UFUNCTION()
-		void ToogleLight();
+		float LightIntensity;
 	
 	UFUNCTION()
-		void OnOverlapBegin(
-			UPrimitiveComponent*OverlapComponent,
-			class AActor* OverlappedActor, 
-			AActor* OtherActor, 
-			UPrimitiveComponent* OtherComponent,
-			int32 OtherBodyIndex, 
-			bool bFromSweep, 
-			const FHitResult& SweepResult
-	    );
+		void ToggleLight();
+	
+	
 	UFUNCTION()
-		void OnOverlapEnd(
-			UPrimitiveComponent* OverlapComponent,
-			class AActor* OverlappedActor,
-			AActor* OtherActor,
-			UPrimitiveComponent* OtherComponent,
-			int32 OtherBodyIndex,
-			bool bFromSweep,
-			const FHitResult& SweepResult
-		);
+		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	
+	UFUNCTION()
+		void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 
 };

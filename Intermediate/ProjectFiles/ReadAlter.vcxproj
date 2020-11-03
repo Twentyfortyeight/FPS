@@ -364,18 +364,24 @@
     <NMakeOutput>..\..\Binaries\IOS\ReadAlter-IOS-Shipping</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RegisterComponentHit.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RotateanActor.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\RotateAngleAxis.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\RotateAngleAxisSpecifyVector.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SecondTriggerBox.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SetActorLocationandRotation.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SetViewTarget.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SetViewTargetWithBlend.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SweepTrace.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TimerActor.cpp" />
+    <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RegisterComponentHit.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RotateanActor.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\RotateAngleAxis.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\RotateAngleAxisSpecifyVector.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SecondTriggerBox.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SetActorLocationandRotation.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SetViewTarget.h" />

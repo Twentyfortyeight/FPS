@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeReadAlter_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x9B726E37,
-				0xE247865F,
+				0xAE193B3D,
+				0x52EB562D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

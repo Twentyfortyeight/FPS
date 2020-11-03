@@ -11,6 +11,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "LightSwichButton.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -82,6 +83,16 @@ AReadAlterCharacter::AReadAlterCharacter()
 
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
+
+	TriggerCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger Capsule"));
+	TriggerCapsule->InitCapsuleSize(55.f, 96.f);
+	TriggerCapsule->SetCollisionProfileName(TEXT("Trigger"));
+	TriggerCapsule->SetupAttachment(RootComponent);
+
+	TriggerCapsule->OnComponentBeginOverlap.AddDynamic(this, &AReadAlterCharacter::OnOverlapBegin);
+	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AReadAlterCharacter::OverLapEnd);
+
+	CurrentLightSwitch = NULL;
 }
 
 void AReadAlterCharacter::BeginPlay()
@@ -120,6 +131,8 @@ void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AReadAlterCharacter::OnFire);
 
+	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AReadAlterCharacter::OnAction);
+
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
 
@@ -137,6 +150,8 @@ void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AReadAlterCharacter::LookUpAtRate);
 }
+
+
 
 void AReadAlterCharacter::OnFire()
 {
@@ -185,6 +200,8 @@ void AReadAlterCharacter::OnFire()
 		}
 	}
 }
+
+
 
 void AReadAlterCharacter::OnResetVR()
 {
@@ -297,4 +314,28 @@ bool AReadAlterCharacter::EnableTouchscreenMovement(class UInputComponent* Playe
 	}
 	
 	return false;
+}
+
+void AReadAlterCharacter::OnAction()
+{
+	if (CurrentLightSwitch)
+	{
+		CurrentLightSwitch->ToggleLight();
+	}
+}
+
+void AReadAlterCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor && (OtherActor != this) && OtherComp && OtherActor->GetClass()->IsChildOf(ALightSwichButton::StaticClass()))
+	{
+		CurrentLightSwitch = Cast<ALightSwichButton>(OtherActor);
+	}
+}
+
+void AReadAlterCharacter::OverLapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	if (OtherActor && (OtherActor != this) && OtherComp)
+	{
+		CurrentLightSwitch = NULL;
+	}
 }

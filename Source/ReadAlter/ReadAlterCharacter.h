@@ -6,12 +6,14 @@
 #include "GameFramework/Character.h"
 #include "ReadAlterCharacter.generated.h"
 
+
 class UInputComponent;
+
 
 UCLASS(config=Game)
 class AReadAlterCharacter : public ACharacter
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
@@ -45,6 +47,12 @@ class AReadAlterCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UMotionControllerComponent* L_MotionController;
 
+	// create trigger capsule создание капсуль тригера
+	UPROPERTY(VisibleAnywhere)
+		class UCapsuleComponent* TriggerCapsule;
+
+	
+
 public:
 	AReadAlterCharacter();
 
@@ -52,6 +60,8 @@ protected:
 	virtual void BeginPlay();
 
 public:
+	
+	
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -80,10 +90,21 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
+	// declare overlap begin function
+	UFUNCTION()
+		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	// declare overlap end function Создание оверлап евента
+	UFUNCTION()
+		void OverLapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	class ALightSwichButton* CurrentLightSwitch;
+	
+
 protected:
 	
 	/** Fires a projectile. */
 	void OnFire();
+
+	void OnAction();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();
