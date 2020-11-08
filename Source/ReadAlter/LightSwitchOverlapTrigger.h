@@ -23,15 +23,19 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
+	// declare point light comp
 	UPROPERTY(VisibleAnywhere, Category = "Light Switch")
 		class UPointLightComponent* PointLight;
 	
+	// declare sphere comp
 	UPROPERTY(VisibleAnywhere)
 		class USphereComponent* LightSphere;
 	
+	// declare light intensity variable
 	UPROPERTY(VisibleAnywhere)
 		float LightIntensity;
 	
+	// declare ToggleLight function
 	UFUNCTION()
 		void ToggleLight();
 	

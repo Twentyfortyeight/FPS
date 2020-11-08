@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwichButton() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_ReadAlter();
 	READALTER_API UFunction* Z_Construct_UFunction_ALightSwichButton_ToggleLight();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UPointLightComponent_NoRegister();
 // End Cross Module References
 	void ALightSwichButton::StaticRegisterNativesALightSwichButton()
@@ -66,6 +67,10 @@ void EmptyLinkFunctionForGeneratedCodeLightSwichButton() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LightIntensity;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_lightsphere_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_lightsphere;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_pointLight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_pointLight;
@@ -94,6 +99,14 @@ void EmptyLinkFunctionForGeneratedCodeLightSwichButton() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ALightSwichButton_Statics::NewProp_LightIntensity = { "LightIntensity", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwichButton, LightIntensity), METADATA_PARAMS(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_LightIntensity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_LightIntensity_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwichButton_Statics::NewProp_lightsphere_MetaData[] = {
+		{ "Category", "LightSwichButton" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "LightSwichButton.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwichButton_Statics::NewProp_lightsphere = { "lightsphere", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwichButton, lightsphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_lightsphere_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_lightsphere_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwichButton_Statics::NewProp_pointLight_MetaData[] = {
 		{ "Category", "LightSwichButton" },
 		{ "EditInline", "true" },
@@ -103,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwichButton() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwichButton_Statics::NewProp_pointLight = { "pointLight", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwichButton, pointLight), Z_Construct_UClass_UPointLightComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_pointLight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwichButton_Statics::NewProp_pointLight_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALightSwichButton_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwichButton_Statics::NewProp_LightIntensity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwichButton_Statics::NewProp_lightsphere,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALightSwichButton_Statics::NewProp_pointLight,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ALightSwichButton_Statics::StaticCppClassTypeInfo = {
@@ -132,7 +146,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwichButton() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALightSwichButton, 1514933108);
+	IMPLEMENT_CLASS(ALightSwichButton, 3802364873);
 	template<> READALTER_API UClass* StaticClass<ALightSwichButton>()
 	{
 		return ALightSwichButton::StaticClass();

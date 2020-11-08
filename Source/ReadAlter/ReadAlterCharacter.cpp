@@ -12,6 +12,10 @@
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
 #include "LightSwichButton.h"
+#include <EngineGlobals.h>
+#include <Runtime/Engine/Classes/Engine/Engine.h>
+
+
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -84,15 +88,18 @@ AReadAlterCharacter::AReadAlterCharacter()
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
 
+	// create trigger capsule создание тригер капсулы
 	TriggerCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger Capsule"));
-	TriggerCapsule->InitCapsuleSize(55.f, 96.f);
+	TriggerCapsule->InitCapsuleSize(55.f, 96.0f); // размер капсулы
 	TriggerCapsule->SetCollisionProfileName(TEXT("Trigger"));
 	TriggerCapsule->SetupAttachment(RootComponent);
 
+	// bind trigger events бинд события тригер
 	TriggerCapsule->OnComponentBeginOverlap.AddDynamic(this, &AReadAlterCharacter::OnOverlapBegin);
-	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AReadAlterCharacter::OverLapEnd);
+	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AReadAlterCharacter::OnOverlapEnd);
 
-	CurrentLightSwitch = NULL;
+	// set current light switch to null Свичь
+	CurrentLightSwitch = nullptr;
 }
 
 void AReadAlterCharacter::BeginPlay()
@@ -123,15 +130,17 @@ void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 {
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
-
+	
+	PlayerInputComponent->BindAction("action", IE_Pressed, this, &AReadAlterCharacter::OnAction);
+	
 	// Bind jump events
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AReadAlterCharacter::OnFire);
-
-	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AReadAlterCharacter::OnAction);
+	PlayerInputComponent->BindAction("CallAction", IE_Pressed, this, &AReadAlterCharacter::CallAction);
+	
 
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
@@ -150,6 +159,10 @@ void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AReadAlterCharacter::LookUpAtRate);
 }
+
+
+
+
 
 
 
@@ -316,6 +329,10 @@ bool AReadAlterCharacter::EnableTouchscreenMovement(class UInputComponent* Playe
 	return false;
 }
 
+
+
+
+
 void AReadAlterCharacter::OnAction()
 {
 	if (CurrentLightSwitch)
@@ -324,18 +341,49 @@ void AReadAlterCharacter::OnAction()
 	}
 }
 
+void AReadAlterCharacter::CallAction()
+{
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Emerald, TEXT("I am pushing callAction"));
+	}
+}
+
+//overlap on begin function овер лап 
 void AReadAlterCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (OtherActor && (OtherActor != this) && OtherComp && OtherActor->GetClass()->IsChildOf(ALightSwichButton::StaticClass()))
 	{
 		CurrentLightSwitch = Cast<ALightSwichButton>(OtherActor);
 	}
+	
+	//Character Overlap Events
+	if (OtherActor && (OtherActor != this) && OtherComp)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("Begin overlap"));
+		}
+	}
 }
 
-void AReadAlterCharacter::OverLapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+//overlap on end function энд овер лап 
+void AReadAlterCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	if (OtherActor && (OtherActor != this) && OtherComp)
 	{
-		CurrentLightSwitch = NULL;
+		CurrentLightSwitch = nullptr;
 	}
+
+
+	//Character Overlap Events
+	if (OtherActor && (OtherActor != this) && OtherComp)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("End overlap"));
+		}
+	}
+
 }
+

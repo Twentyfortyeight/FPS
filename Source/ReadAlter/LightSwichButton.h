@@ -1,5 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -26,8 +27,13 @@ public:
 		class UPointLightComponent *pointLight;
 
 	UPROPERTY(VisibleAnywhere)
+		class USphereComponent* lightsphere;
+
+
+	UPROPERTY(VisibleAnywhere)
 		float LightIntensity;
 
 	UFUNCTION(BlueprintCallable)
 		void ToggleLight();
 };
+

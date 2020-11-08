@@ -95,7 +95,8 @@ public:
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	// declare overlap end function Создание оверлап евента
 	UFUNCTION()
-		void OverLapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+		void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	
 	class ALightSwichButton* CurrentLightSwitch;
 	
 
@@ -105,6 +106,8 @@ protected:
 	void OnFire();
 
 	void OnAction();
+	
+	void CallAction();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();

@@ -366,6 +366,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\RadialImpulse.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RegisterComponentHit.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RotateanActor.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RotateAngleAxis.cpp" />
@@ -376,8 +377,10 @@
     <ClCompile Include="..\..\Source\ReadAlter\SetViewTargetWithBlend.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SweepTrace.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TimerActor.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\TriggerBoxSpecificActor.cpp" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\RadialImpulse.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RegisterComponentHit.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RotateanActor.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RotateAngleAxis.h" />
@@ -388,6 +391,7 @@
     <ClInclude Include="..\..\Source\ReadAlter\SetViewTargetWithBlend.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SweepTrace.h" />
     <ClInclude Include="..\..\Source\ReadAlter\TimerActor.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\TriggerBoxSpecificActor.h" />
     <None Include="..\..\ReadAlter.uproject" />
     <None Include="..\..\Source\ReadAlter.Target.cs" />
     <None Include="..\..\Source\ReadAlterEditor.Target.cs" />

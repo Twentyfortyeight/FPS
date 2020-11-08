@@ -19,7 +19,7 @@ struct FHitResult;
 #define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_SPARSE_DATA
 #define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOverLapEnd) \
+	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
 		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
@@ -27,7 +27,7 @@ struct FHitResult;
 		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->OverLapEnd(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex); \
+		P_THIS->OnOverlapEnd(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex); \
 		P_NATIVE_END; \
 	} \
  \
@@ -48,7 +48,7 @@ struct FHitResult;
 
 #define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOverLapEnd) \
+	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
 		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
@@ -56,7 +56,7 @@ struct FHitResult;
 		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->OverLapEnd(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex); \
+		P_THIS->OnOverlapEnd(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex); \
 		P_NATIVE_END; \
 	} \
  \

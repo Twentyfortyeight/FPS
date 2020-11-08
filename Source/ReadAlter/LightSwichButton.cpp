@@ -3,6 +3,8 @@
 
 #include "LightSwichButton.h"
 #include "Components/PointLightComponent.h"
+#include "Components/SphereComponent.h"
+
 
 // Sets default values
 ALightSwichButton::ALightSwichButton()
@@ -14,6 +16,15 @@ ALightSwichButton::ALightSwichButton()
 	pointLight->Intensity = LightIntensity;
 	pointLight->bVisible = true;
 	RootComponent = pointLight;
+
+	lightsphere = CreateDefaultSubobject<USphereComponent>(TEXT("Light Sphere component"));
+	lightsphere->InitSphereRadius(300.0f);
+	lightsphere->SetCollisionProfileName(TEXT("Triger"));
+	lightsphere->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
+	lightsphere->SetupAttachment(RootComponent);
+
+
+
 }
 
 // Called when the game starts or when spawned

@@ -186,7 +186,9 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitchOverlapTrigger() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// declare ToggleLight function\n" },
 		{ "ModuleRelativePath", "LightSwitchOverlapTrigger.h" },
+		{ "ToolTip", "declare ToggleLight function" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALightSwitchOverlapTrigger, nullptr, "ToggleLight", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight_Statics::Function_MetaDataParams)) };
@@ -233,7 +235,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitchOverlapTrigger() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ALightSwitchOverlapTrigger_OnOverlapBegin, "OnOverlapBegin" }, // 2334031504
 		{ &Z_Construct_UFunction_ALightSwitchOverlapTrigger_OnOverlapEnd, "OnOverlapEnd" }, // 225779639
-		{ &Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight, "ToggleLight" }, // 1786791023
+		{ &Z_Construct_UFunction_ALightSwitchOverlapTrigger_ToggleLight, "ToggleLight" }, // 3171512987
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::Class_MetaDataParams[] = {
@@ -244,23 +246,29 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitchOverlapTrigger() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightIntensity_MetaData[] = {
 		{ "Category", "LightSwitchOverlapTrigger" },
+		{ "Comment", "// declare light intensity variable\n" },
 		{ "ModuleRelativePath", "LightSwitchOverlapTrigger.h" },
+		{ "ToolTip", "declare light intensity variable" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightIntensity = { "LightIntensity", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwitchOverlapTrigger, LightIntensity), METADATA_PARAMS(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightIntensity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightIntensity_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightSphere_MetaData[] = {
 		{ "Category", "LightSwitchOverlapTrigger" },
+		{ "Comment", "// declare sphere comp\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "LightSwitchOverlapTrigger.h" },
+		{ "ToolTip", "declare sphere comp" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightSphere = { "LightSphere", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwitchOverlapTrigger, LightSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightSphere_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_LightSphere_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_PointLight_MetaData[] = {
 		{ "Category", "Light Switch" },
+		{ "Comment", "// declare point light comp\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "LightSwitchOverlapTrigger.h" },
+		{ "ToolTip", "declare point light comp" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_PointLight = { "PointLight", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALightSwitchOverlapTrigger, PointLight), Z_Construct_UClass_UPointLightComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_PointLight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ALightSwitchOverlapTrigger_Statics::NewProp_PointLight_MetaData)) };
@@ -296,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeLightSwitchOverlapTrigger() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALightSwitchOverlapTrigger, 3057785622);
+	IMPLEMENT_CLASS(ALightSwitchOverlapTrigger, 1313252589);
 	template<> READALTER_API UClass* StaticClass<ALightSwitchOverlapTrigger>()
 	{
 		return ALightSwitchOverlapTrigger::StaticClass();
