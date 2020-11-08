@@ -33,6 +33,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\ReadAlterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\ActorLineTrace.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\AddBillComponent.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\AddMeshfromFile.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\DdebugHelpers.cpp.obj"
@@ -61,6 +62,7 @@
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\SweepTrace.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\TimerActor.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\TriggerBoxSpecificActor.cpp.obj"
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\ActorLineTrace.gen.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\AddBillComponent.gen.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\AddMeshfromFile.gen.cpp.obj"
 "C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\DdebugHelpers.gen.cpp.obj"

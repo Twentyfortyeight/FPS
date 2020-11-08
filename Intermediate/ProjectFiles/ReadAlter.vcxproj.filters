@@ -164,6 +164,9 @@
     <ClInclude Include="..\..\Source\ReadAlter\RadialImpulse.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\ActorLineTrace.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\GetNumberofPawns.cpp">
@@ -209,6 +212,9 @@
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ReadAlter\RadialImpulse.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\ActorLineTrace.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

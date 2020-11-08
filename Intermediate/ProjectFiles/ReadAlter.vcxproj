@@ -364,6 +364,7 @@
     <NMakeOutput>..\..\Binaries\IOS\ReadAlter-IOS-Shipping</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ReadAlter\ActorLineTrace.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RadialImpulse.cpp" />
@@ -378,6 +379,7 @@
     <ClCompile Include="..\..\Source\ReadAlter\SweepTrace.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TimerActor.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TriggerBoxSpecificActor.cpp" />
+    <ClInclude Include="..\..\Source\ReadAlter\ActorLineTrace.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RadialImpulse.h" />
