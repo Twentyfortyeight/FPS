@@ -14,6 +14,7 @@
 #include "LightSwichButton.h"
 #include <EngineGlobals.h>
 #include <Runtime/Engine/Classes/Engine/Engine.h>
+#include "DrawDebugHelpers.h"
 
 
 
@@ -121,6 +122,34 @@ void AReadAlterCharacter::BeginPlay()
 		VR_Gun->SetHiddenInGame(true, true);
 		Mesh1P->SetHiddenInGame(false, true);
 	}
+}
+
+void AReadAlterCharacter::Tick(float DeltaTime)
+{
+	/*Super::Tick(DeltaTime);
+	// Лайн Трес от персонажа 
+	FHitResult OutHit;
+	FVector Start = FP_Gun->GetComponentLocation();
+	FVector ForwardVector = FirstPersonCameraComponent->GetForwardVector();
+	FVector End = (Start + (ForwardVector * 1000.0f));
+	FCollisionQueryParams CollisionParms;
+	DrawDebugLine(GetWorld(), Start, End, FColor::Emerald, false, 1, 0, 1);
+	bool ItsHit = GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, CollisionParms);
+	
+	if (ItsHit)
+	{
+		if (OutHit.bBlockingHit)
+		{
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Emerald, FString::Printf(TEXT("You are Hiting: %s"), *OutHit.GetActor()->GetName()));
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Emerald, FString::Printf(TEXT("Impact Point: %s"), *OutHit.ImpactPoint.ToString()));
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Emerald, FString::Printf(TEXT("Normal Point: %s"), *OutHit.ImpactPoint.ToString()));
+			}
+		}
+	}
+
+	*/
 }
 
 //////////////////////////////////////////////////////////////////////////

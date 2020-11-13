@@ -167,6 +167,15 @@
     <ClInclude Include="..\..\Source\ReadAlter\ActorLineTrace.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\RotateActorAroundPlayer.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\PawnMovement.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\MyMovingPawn.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\GetNumberofPawns.cpp">
@@ -215,6 +224,15 @@
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ReadAlter\ActorLineTrace.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\RotateActorAroundPlayer.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\PawnMovement.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\MyMovingPawn.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ReadAlter-8579.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\ReadAlterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Module.ReadAlter.cpp.obj"
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Module.ReadAlter.gen.cpp.obj"
+"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Default.rc2.res"
+/OUT:"C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\UE4Editor-ReadAlter-8579.lib"
+/INCLUDE:IMPLEMENT_MODULE_ReadAlter
