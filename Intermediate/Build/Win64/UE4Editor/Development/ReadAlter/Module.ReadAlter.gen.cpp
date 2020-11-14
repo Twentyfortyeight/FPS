@@ -9,6 +9,7 @@
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/LightSwichButton.gen.cpp"
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/LightSwitchOverlapTrigger.gen.cpp"
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/mainCharacter.gen.cpp"
+#include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/MPawn.gen.cpp"
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/MyActorLoc.gen.cpp"
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/MyMovingPawn.gen.cpp"
 #include "C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/NewActor.gen.cpp"

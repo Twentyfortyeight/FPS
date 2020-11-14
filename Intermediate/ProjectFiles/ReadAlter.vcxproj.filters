@@ -176,6 +176,9 @@
     <ClInclude Include="..\..\Source\ReadAlter\MyMovingPawn.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\MPawn.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\GetNumberofPawns.cpp">
@@ -233,6 +236,9 @@
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ReadAlter\MyMovingPawn.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\MPawn.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

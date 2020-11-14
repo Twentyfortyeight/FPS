@@ -40,7 +40,6 @@ void EmptyLinkFunctionForGeneratedCodePawnMovement() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UPawnMovement_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "PawnMovement.h" },
 		{ "ModuleRelativePath", "PawnMovement.h" },
 	};
@@ -72,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodePawnMovement() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UPawnMovement, 4024437954);
+	IMPLEMENT_CLASS(UPawnMovement, 2723981195);
 	template<> READALTER_API UClass* StaticClass<UPawnMovement>()
 	{
 		return UPawnMovement::StaticClass();

@@ -9,6 +9,7 @@
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/LightSwichButton.cpp"
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/LightSwitchOverlapTrigger.cpp"
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/mainCharacter.cpp"
+#include "C:/UE4 Project/ReadAlter/Source/ReadAlter/MPawn.cpp"
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/MyActorLoc.cpp"
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/MyMovingPawn.cpp"
 #include "C:/UE4 Project/ReadAlter/Source/ReadAlter/NewActor.cpp"

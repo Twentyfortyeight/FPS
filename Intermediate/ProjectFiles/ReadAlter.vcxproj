@@ -367,6 +367,7 @@
     <ClCompile Include="..\..\Source\ReadAlter\ActorLineTrace.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\MPawn.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\MyMovingPawn.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\PawnMovement.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RadialImpulse.cpp" />
@@ -385,6 +386,7 @@
     <ClInclude Include="..\..\Source\ReadAlter\ActorLineTrace.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\MPawn.h" />
     <ClInclude Include="..\..\Source\ReadAlter\MyMovingPawn.h" />
     <ClInclude Include="..\..\Source\ReadAlter\PawnMovement.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RadialImpulse.h" />

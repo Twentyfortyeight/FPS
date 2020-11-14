@@ -6,9 +6,7 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "PawnMovement.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class READALTER_API UPawnMovement : public UPawnMovementComponent
 {

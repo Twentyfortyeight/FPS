@@ -35,6 +35,9 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\mainCharacter.generated.h
+C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/MPawn.gen.cpp
+C:\UE4 Project\ReadAlter\Source\ReadAlter/MPawn.h
+C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\MPawn.generated.h
 C:/UE4 Project/ReadAlter/Intermediate/Build/Win64/UE4Editor/Inc/ReadAlter/MyActorLoc.gen.cpp
 C:\UE4 Project\ReadAlter\Source\ReadAlter/MyActorLoc.h
 C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\MyActorLoc.generated.h

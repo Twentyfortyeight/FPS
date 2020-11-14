@@ -14,29 +14,30 @@
 
 
 // Sets default values
+
 AMyMovingPawn::AMyMovingPawn()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	// Our root component will be a sphere that reacts to physics
 	USphereComponent* SPHEREComp = CreateDefaultSubobject<USphereComponent>(TEXT("RootComp"));
 	RootComponent = SPHEREComp;
 	SPHEREComp->InitSphereRadius(40.f);
 	SPHEREComp->SetCollisionProfileName(TEXT("Pawn"));
 	
+	// Create and position a mesh component so we can see where our sphere is
 	UStaticMeshComponent* SphereVisual = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Visual Resperation"));
 	SphereVisual->SetupAttachment(RootComponent);
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>SphereVisualAsset(TEXT("/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere"));
-
-	
-	
-
-
 	if (SphereVisualAsset.Succeeded())
 	{
 		SphereVisual->SetStaticMesh(SphereVisualAsset.Object);
 		SphereVisual->SetRelativeLocation(FVector(0,0,-40.0f));
 		SphereVisual->SetWorldScale3D(FVector(0.8f));
 	}
+	
+	// Create a particle system that we can activate or deactivate
 	OurParticleComp = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MOVMENT PARTICLE"));
 	OurParticleComp->SetupAttachment(SphereVisual);
 	OurParticleComp->bAutoActivate = false;
@@ -47,6 +48,7 @@ AMyMovingPawn::AMyMovingPawn()
 		OurParticleComp->SetTemplate(ParticleAsset.Object);
 	}
 
+	// Use a spring arm to give the camera smooth, natural-feeling motion
 	USpringArmComponent* Springarm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera Attachment"));
 	Springarm->SetupAttachment(RootComponent);
 	Springarm->RelativeRotation = FRotator(-45.0, 0.f, 0.f);
@@ -54,10 +56,14 @@ AMyMovingPawn::AMyMovingPawn()
 	Springarm->bEnableCameraLag = true;
 	Springarm->CameraLagSpeed = 3.0f;
 
+	// Create a camera and attach to our spring arm
 	UCameraComponent* Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(Springarm, USpringArmComponent::SocketName);
+	
+	// Take control of the default player
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 
+	// Create an instance of our movement component, and tell it to update our root component.
 	OurPawnMovement = CreateDefaultSubobject<UPawnMovement>(TEXT("Custom movement"));
 	OurPawnMovement->UpdatedComponent = RootComponent;
 
