@@ -16,8 +16,8 @@ struct FHitResult;
 #endif
 #define READALTER_ReadAlterCharacter_generated_h
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_SPARSE_DATA
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_SPARSE_DATA
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
@@ -46,7 +46,7 @@ struct FHitResult;
 	}
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnOverlapEnd) \
 	{ \
@@ -75,7 +75,7 @@ struct FHitResult;
 	}
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_INCLASS_NO_PURE_DECLS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAReadAlterCharacter(); \
 	friend struct Z_Construct_UClass_AReadAlterCharacter_Statics; \
@@ -84,7 +84,7 @@ public: \
 	DECLARE_SERIALIZER(AReadAlterCharacter)
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_INCLASS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAReadAlterCharacter(); \
 	friend struct Z_Construct_UClass_AReadAlterCharacter_Statics; \
@@ -93,7 +93,7 @@ public: \
 	DECLARE_SERIALIZER(AReadAlterCharacter)
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_STANDARD_CONSTRUCTORS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AReadAlterCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AReadAlterCharacter) \
@@ -106,7 +106,7 @@ private: \
 public:
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_ENHANCED_CONSTRUCTORS \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AReadAlterCharacter(AReadAlterCharacter&&); \
@@ -117,7 +117,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AReadAlterCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AReadAlterCharacter)
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AReadAlterCharacter, Mesh1P); } \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AReadAlterCharacter, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AReadAlterCharacter, FP_MuzzleLocation); } \
@@ -129,27 +129,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AReadAlterCharacter); \
 	FORCEINLINE static uint32 __PPO__TriggerCapsule() { return STRUCT_OFFSET(AReadAlterCharacter, TriggerCapsule); }
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_13_PROLOG
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_GENERATED_BODY_LEGACY \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_14_PROLOG
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_SPARSE_DATA \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_INCLASS \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_STANDARD_CONSTRUCTORS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_PRIVATE_PROPERTY_OFFSET \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_SPARSE_DATA \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_RPC_WRAPPERS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_INCLASS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_GENERATED_BODY \
+#define ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_SPARSE_DATA \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_INCLASS_NO_PURE_DECLS \
-	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_16_ENHANCED_CONSTRUCTORS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_PRIVATE_PROPERTY_OFFSET \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_SPARSE_DATA \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_INCLASS_NO_PURE_DECLS \
+	ReadAlter_Source_ReadAlter_ReadAlterCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

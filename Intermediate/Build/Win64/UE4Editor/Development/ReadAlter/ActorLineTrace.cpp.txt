@@ -1,4 +1,0 @@
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Definitions.ReadAlter.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\ActorLineTrace.h
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\ActorLineTrace.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h

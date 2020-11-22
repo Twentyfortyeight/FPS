@@ -2,11 +2,13 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ReadAlter.cpp.obj": [
+			"ActorFloating.cpp.obj",
 			"ActorLineTrace.cpp.obj",
 			"AddBillComponent.cpp.obj",
 			"AddMeshfromFile.cpp.obj",
 			"DdebugHelpers.cpp.obj",
 			"DebugLogging.cpp.obj",
+			"DestroyActorOnOverlap.cpp.obj",
 			"GetNumberofPawns.cpp.obj",
 			"HideActor.cpp.obj",
 			"LightSwichButton.cpp.obj",
@@ -16,6 +18,7 @@
 			"MyActorLoc.cpp.obj",
 			"MyMovingPawn.cpp.obj",
 			"NewActor.cpp.obj",
+			"OpenDoorWithLerp.cpp.obj",
 			"PawnMovement.cpp.obj",
 			"RadialImpulse.cpp.obj",
 			"ReadAlter.cpp.obj",
@@ -33,15 +36,18 @@
 			"SetViewTarget.cpp.obj",
 			"SetViewTargetWithBlend.cpp.obj",
 			"SweepTrace.cpp.obj",
+			"SwitchMaterialMesh.cpp.obj",
 			"TimerActor.cpp.obj",
 			"TriggerBoxSpecificActor.cpp.obj"
 		],
 		"Module.ReadAlter.gen.cpp.obj": [
+			"ActorFloating.gen.cpp.obj",
 			"ActorLineTrace.gen.cpp.obj",
 			"AddBillComponent.gen.cpp.obj",
 			"AddMeshfromFile.gen.cpp.obj",
 			"DdebugHelpers.gen.cpp.obj",
 			"DebugLogging.gen.cpp.obj",
+			"DestroyActorOnOverlap.gen.cpp.obj",
 			"GetNumberofPawns.gen.cpp.obj",
 			"HideActor.gen.cpp.obj",
 			"LightSwichButton.gen.cpp.obj",
@@ -51,6 +57,7 @@
 			"MyActorLoc.gen.cpp.obj",
 			"MyMovingPawn.gen.cpp.obj",
 			"NewActor.gen.cpp.obj",
+			"OpenDoorWithLerp.gen.cpp.obj",
 			"PawnMovement.gen.cpp.obj",
 			"RadialImpulse.gen.cpp.obj",
 			"ReadAlter.init.gen.cpp.obj",
@@ -68,6 +75,7 @@
 			"SetViewTarget.gen.cpp.obj",
 			"SetViewTargetWithBlend.gen.cpp.obj",
 			"SweepTrace.gen.cpp.obj",
+			"SwitchMaterialMesh.gen.cpp.obj",
 			"TimerActor.gen.cpp.obj",
 			"TriggerBoxSpecificActor.gen.cpp.obj"
 		]

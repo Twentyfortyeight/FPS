@@ -1,5 +1,0 @@
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Definitions.ReadAlter.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter/ReadAlterProjectile.h
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\ReadAlterProjectile.generated.h

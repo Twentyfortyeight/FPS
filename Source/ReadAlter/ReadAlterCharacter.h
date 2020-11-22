@@ -7,6 +7,7 @@
 #include "ReadAlterCharacter.generated.h"
 
 
+
 class UInputComponent;
 
 
@@ -102,10 +103,13 @@ public:
 	
 	class ALightSwichButton* CurrentLightSwitch;
 	
+	
 
 protected:
 	
 	/** Fires a projectile. */
+	
+	
 	void OnFire();
 
 	void OnAction();

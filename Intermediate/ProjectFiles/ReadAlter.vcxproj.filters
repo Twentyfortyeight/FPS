@@ -179,6 +179,18 @@
     <ClInclude Include="..\..\Source\ReadAlter\MPawn.h">
       <Filter>Source\ReadAlter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\ActorFloating.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\DestroyActorOnOverlap.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\SwitchMaterialMesh.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ReadAlter\OpenDoorWithLerp.h">
+      <Filter>Source\ReadAlter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ReadAlter\GetNumberofPawns.cpp">
@@ -239,6 +251,18 @@
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ReadAlter\MPawn.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\ActorFloating.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\DestroyActorOnOverlap.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\SwitchMaterialMesh.cpp">
+      <Filter>Source\ReadAlter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ReadAlter\OpenDoorWithLerp.cpp">
       <Filter>Source\ReadAlter</Filter>
     </ClCompile>
   </ItemGroup>

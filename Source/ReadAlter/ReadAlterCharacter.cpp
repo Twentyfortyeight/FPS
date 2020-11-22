@@ -18,10 +18,9 @@
 
 
 
-DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
-//////////////////////////////////////////////////////////////////////////
-// AReadAlterCharacter
+
+DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 AReadAlterCharacter::AReadAlterCharacter()
 {
@@ -100,7 +99,8 @@ AReadAlterCharacter::AReadAlterCharacter()
 	TriggerCapsule->OnComponentEndOverlap.AddDynamic(this, &AReadAlterCharacter::OnOverlapEnd);
 
 	// set current light switch to null Свичь
-	CurrentLightSwitch = nullptr;
+	//CurrentLightSwitch = nullptr;
+	
 }
 
 void AReadAlterCharacter::BeginPlay()
@@ -152,13 +152,11 @@ void AReadAlterCharacter::Tick(float DeltaTime)
 	*/
 }
 
-//////////////////////////////////////////////////////////////////////////
-// Input
-
 void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
+	
 	
 	PlayerInputComponent->BindAction("action", IE_Pressed, this, &AReadAlterCharacter::OnAction);
 	
@@ -189,16 +187,74 @@ void AReadAlterCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AReadAlterCharacter::LookUpAtRate);
 }
 
-
-
-
-
-
-
 void AReadAlterCharacter::OnFire()
 {
+	
+	//Add Force to Static Mesh 34 видос лайн трес с физическим воздействием на динамические обьекты 
+	//Hit contains information about what the line trace hit.
+	FHitResult Hit;
+	FVector CameraForward = FVector(FirstPersonCameraComponent->GetForwardVector());
+
+	//The length of the line trace in units.
+	//For more flexibility you can expose a public variable in the editor
+	float LineLength = 2000;
+
+	FRotator SpawnRotation = GetControlRotation();
+	FVector StartLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+
+	// log helpful information
+	UE_LOG(LogClass, Log, TEXT("Start Location: %s"), *StartLocation.ToString());
+	UE_LOG(LogClass, Log, TEXT("Spawn Rotation: %s"), *SpawnRotation.ToString());
+	UE_LOG(LogClass, Log, TEXT("Forward Vector: %s"), *FirstPersonCameraComponent->GetForwardVector().ToString());
+
+	//The EndLocation of the line trace
+	FVector EndLocation = StartLocation + (FirstPersonCameraComponent->GetForwardVector() * LineLength);
+
+	//Collision parameters. The following syntax means that we don't want the trace to be complex
+	FCollisionQueryParams CollisionParameters;
+
+	GetWorld()->LineTraceSingleByChannel(Hit, StartLocation, EndLocation, ECollisionChannel::ECC_PhysicsBody, CollisionParameters);
+
+	//DrawDebugLine is used in order to see the line cast we performed
+	//The boolean parameter used here means that we want the lines to be persistent so we can see the actual linecast forever
+	//The last parameter is the width of the lines.
+	DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Red, true, -1, 0, 1.f);
+
+	if (Hit.GetActor())
+	{
+		if (Hit.GetActor()->IsRootComponentMovable()) {
+
+			UStaticMeshComponent* MeshRootComp = Cast<UStaticMeshComponent>(Hit.GetActor()->GetRootComponent());
+
+			UE_LOG(LogClass, Log, TEXT("I Hit: %s"), *Hit.GetActor()->GetName());
+			UE_LOG(LogClass, Log, TEXT("Mesh Mass: %f"), MeshRootComp->GetMass());
+
+			MeshRootComp->AddForce(CameraForward * 100000 * MeshRootComp->GetMass());
+		}
+	}
+	
+	
+	/* 
+	Line trace to fire , лайн трейс с оружия 
+	FHitResult Outhits;
+	FVector Start = FP_Gun->GetComponentLocation();
+	FVector ForwardVector = FirstPersonCameraComponent->GetForwardVector();
+	FVector End = ((ForwardVector * 3000.0f)+ Start);// Ренж поподания 
+	FCollisionQueryParams CollsionParms;
+	DrawDebugLine(GetWorld(), Start, End, FColor::Emerald, true);//Линия которая исходит от дула оружия 
+	bool IsHit = GetWorld()->LineTraceSingleByChannel(Outhits, Start, End, ECC_Visibility, CollsionParms);//проверка бранчем
+	if (IsHit)
+	{
+		if (Outhits.bBlockingHit)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Green, FString::Printf(TEXT("You are hitting: %s"), *Outhits.GetActor()->GetName()));
+			GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Green, FString::Printf(TEXT("Impact Point: %s"), *Outhits.ImpactPoint.ToString()));
+			GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Green, FString::Printf(TEXT("Normal Point: %s"), *Outhits.ImpactNormal.ToString()));
+		}
+	}
+	*/
 	// try and fire a projectile
-	if (ProjectileClass != NULL)
+	/*if (ProjectileClass != NULL)
 	{
 		UWorld* const World = GetWorld();
 		if (World != NULL)
@@ -224,7 +280,8 @@ void AReadAlterCharacter::OnFire()
 			}
 		}
 	}
-
+	*/
+	
 	// try and play the sound if specified
 	if (FireSound != NULL)
 	{
@@ -242,8 +299,6 @@ void AReadAlterCharacter::OnFire()
 		}
 	}
 }
-
-
 
 void AReadAlterCharacter::OnResetVR()
 {
@@ -274,44 +329,6 @@ void AReadAlterCharacter::EndTouch(const ETouchIndex::Type FingerIndex, const FV
 	}
 	TouchItem.bIsPressed = false;
 }
-
-//Commenting this section out to be consistent with FPS BP template.
-//This allows the user to turn without using the right virtual joystick
-
-//void AReadAlterCharacter::TouchUpdate(const ETouchIndex::Type FingerIndex, const FVector Location)
-//{
-//	if ((TouchItem.bIsPressed == true) && (TouchItem.FingerIndex == FingerIndex))
-//	{
-//		if (TouchItem.bIsPressed)
-//		{
-//			if (GetWorld() != nullptr)
-//			{
-//				UGameViewportClient* ViewportClient = GetWorld()->GetGameViewport();
-//				if (ViewportClient != nullptr)
-//				{
-//					FVector MoveDelta = Location - TouchItem.Location;
-//					FVector2D ScreenSize;
-//					ViewportClient->GetViewportSize(ScreenSize);
-//					FVector2D ScaledDelta = FVector2D(MoveDelta.X, MoveDelta.Y) / ScreenSize;
-//					if (FMath::Abs(ScaledDelta.X) >= 4.0 / ScreenSize.X)
-//					{
-//						TouchItem.bMoved = true;
-//						float Value = ScaledDelta.X * BaseTurnRate;
-//						AddControllerYawInput(Value);
-//					}
-//					if (FMath::Abs(ScaledDelta.Y) >= 4.0 / ScreenSize.Y)
-//					{
-//						TouchItem.bMoved = true;
-//						float Value = ScaledDelta.Y * BaseTurnRate;
-//						AddControllerPitchInput(Value);
-//					}
-//					TouchItem.Location = Location;
-//				}
-//				TouchItem.Location = Location;
-//			}
-//		}
-//	}
-//}
 
 void AReadAlterCharacter::MoveForward(float Value)
 {
@@ -358,18 +375,6 @@ bool AReadAlterCharacter::EnableTouchscreenMovement(class UInputComponent* Playe
 	return false;
 }
 
-
-
-
-
-void AReadAlterCharacter::OnAction()
-{
-	if (CurrentLightSwitch)
-	{
-		CurrentLightSwitch->ToggleLight();
-	}
-}
-
 void AReadAlterCharacter::CallAction()
 {
 	if (GEngine)
@@ -378,7 +383,17 @@ void AReadAlterCharacter::CallAction()
 	}
 }
 
-//overlap on begin function овер лап 
+void AReadAlterCharacter::OnAction()
+{
+	
+    /*if (CurrentLightSwitch)
+	{
+		CurrentLightSwitch->ToggleLight();
+	}
+	*/
+}
+
+//overlap on begin function овер лап для переключения света
 void AReadAlterCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (OtherActor && (OtherActor != this) && OtherComp && OtherActor->GetClass()->IsChildOf(ALightSwichButton::StaticClass()))
@@ -394,9 +409,12 @@ void AReadAlterCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AA
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("Begin overlap"));
 		}
 	}
+
+	
+
 }
 
-//overlap on end function энд овер лап 
+//overlap on end function энд овер лап  для переключения света
 void AReadAlterCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	if (OtherActor && (OtherActor != this) && OtherComp)
@@ -413,6 +431,9 @@ void AReadAlterCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AAct
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("End overlap"));
 		}
 	}
+
+	
+
 
 }
 

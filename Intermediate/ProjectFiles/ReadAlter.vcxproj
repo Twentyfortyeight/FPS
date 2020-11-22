@@ -364,11 +364,14 @@
     <NMakeOutput>..\..\Binaries\IOS\ReadAlter-IOS-Shipping</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ReadAlter\ActorFloating.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\ActorLineTrace.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\DestroyActorOnOverlap.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwichButton.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\MPawn.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\MyMovingPawn.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\OpenDoorWithLerp.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\PawnMovement.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RadialImpulse.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\RegisterComponentHit.cpp" />
@@ -381,13 +384,17 @@
     <ClCompile Include="..\..\Source\ReadAlter\SetViewTarget.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SetViewTargetWithBlend.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\SweepTrace.cpp" />
+    <ClCompile Include="..\..\Source\ReadAlter\SwitchMaterialMesh.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TimerActor.cpp" />
     <ClCompile Include="..\..\Source\ReadAlter\TriggerBoxSpecificActor.cpp" />
+    <ClInclude Include="..\..\Source\ReadAlter\ActorFloating.h" />
     <ClInclude Include="..\..\Source\ReadAlter\ActorLineTrace.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\DestroyActorOnOverlap.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwichButton.h" />
     <ClInclude Include="..\..\Source\ReadAlter\LightSwitchOverlapTrigger.h" />
     <ClInclude Include="..\..\Source\ReadAlter\MPawn.h" />
     <ClInclude Include="..\..\Source\ReadAlter\MyMovingPawn.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\OpenDoorWithLerp.h" />
     <ClInclude Include="..\..\Source\ReadAlter\PawnMovement.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RadialImpulse.h" />
     <ClInclude Include="..\..\Source\ReadAlter\RegisterComponentHit.h" />
@@ -400,6 +407,7 @@
     <ClInclude Include="..\..\Source\ReadAlter\SetViewTarget.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SetViewTargetWithBlend.h" />
     <ClInclude Include="..\..\Source\ReadAlter\SweepTrace.h" />
+    <ClInclude Include="..\..\Source\ReadAlter\SwitchMaterialMesh.h" />
     <ClInclude Include="..\..\Source\ReadAlter\TimerActor.h" />
     <ClInclude Include="..\..\Source\ReadAlter\TriggerBoxSpecificActor.h" />
     <None Include="..\..\ReadAlter.uproject" />

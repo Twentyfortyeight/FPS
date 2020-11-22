@@ -1,8 +1,0 @@
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Development\ReadAlter\Definitions.ReadAlter.h
-C:\UE4 Project\ReadAlter\Source\ReadAlter\GetNumberofPawns.h
-C:\UE4 Project\ReadAlter\Intermediate\Build\Win64\UE4Editor\Inc\ReadAlter\GetNumberofPawns.generated.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/GameEngine.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Slate\Public\Widgets/SViewport.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\SlateCore\Public\Input/HittestGrid.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime/MovieSceneCapture/Public/MovieSceneCaptureHandle.h
-C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameEngine.generated.h
